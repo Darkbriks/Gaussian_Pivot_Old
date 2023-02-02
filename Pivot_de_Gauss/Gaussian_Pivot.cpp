@@ -1,4 +1,4 @@
-﻿#include "PivotDeGauss.h"
+﻿#include "Gaussian_Pivot.h"
 #include "Utils.h"
 #include <iostream>
 #include <string>

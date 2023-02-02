@@ -1,5 +1,5 @@
-﻿#ifndef PIVOT_DE_GAUSS
-#define PIVOT_DE_GAUSS
+﻿#ifndef GAUSSIAN_PIVOT
+#define GAUSSIAN_PIVOT
 
 #include <map>
 #include <string>

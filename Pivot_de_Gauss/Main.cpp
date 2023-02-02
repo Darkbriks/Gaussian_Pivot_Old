@@ -3,7 +3,7 @@
 #include <string>
 #include <map>
 #include "Utils.h"
-#include "PivotDeGauss.h"
+#include "Gaussian_Pivot.h"
 
 using namespace std;
 
