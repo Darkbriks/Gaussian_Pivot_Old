@@ -15,9 +15,12 @@ using namespace std;
 
 int main()
 {
-    int n = 3;
-
     vector<string> liste_equation = enter_system();
+
+    cout << endl << "How many equations are there : ";
+    int n;
+    cin >> n;
+    
     vector<map<string, long double>> system = system_formatting(liste_equation.data(), n);
 
     //vector<map<string, long double>> system = enter_system_formatting();
@@ -32,7 +35,9 @@ int main()
     }
 
     // Wait for user input
-    cin.get();
+    cout << endl << "Press enter to exit" << endl;
+    string tmp;
+    cin >> tmp;
     
     return 0;
 }
