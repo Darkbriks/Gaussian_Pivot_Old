@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <string>
 #include <map>
@@ -15,29 +14,26 @@ using namespace std;
 
 int main()
 {
+    // Enter the system and number of equations
     vector<string> liste_equation = enter_system();
+    cout << endl << "How many equations are there : "; int n; cin >> n;
 
-    cout << endl << "How many equations are there : ";
-    int n;
-    cin >> n;
+    // Format the system
+    vector<map<string, long double>> linear_system = system_formatting(liste_equation.data(), n);
     
-    vector<map<string, long double>> system = system_formatting(liste_equation.data(), n);
-
-    //vector<map<string, long double>> system = enter_system_formatting();
-    
-    system = gaussian_pivot(system, n);
-    map<string, long double> solution = solve_system(system, n);
+    // Solve the system
+    linear_system = gaussian_pivot(linear_system, n);
+    map<string, long double> solution = solve_system(linear_system, n);
 
     // Print the solution
+    cout << endl << "Solution : " << endl;
     for (auto it = solution.begin(); it != solution.end(); it++)
     {
         cout << it->first << " = " << it->second << endl;
     }
 
     // Wait for user input
-    cout << endl << "Press enter to exit" << endl;
-    string tmp;
-    cin >> tmp;
+    system("PAUSE");
     
     return 0;
 }

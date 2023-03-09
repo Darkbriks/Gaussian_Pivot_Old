@@ -46,4 +46,3 @@ vector<map<string, long double>> gaussian_pivot(const vector<map<string, long do
     }
     return result; // Return the system in triangular form
 }
-
